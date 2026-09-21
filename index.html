@@ -1,1 +1,665 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Maria Rosa Moda Feminina - Moda feminina, acessórios e confecção em Goiânia. CNPJ 27.474.715/0001-32. Conheça nossa história, políticas e contato.">
+    <meta name="keywords" content="moda feminina, roupas, acessórios, Goiânia, confecção, Maria Rosa">
+    <meta name="author" content="Maria Rosa Moda Feminina LTDA">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.mariarosamodafeminina.com.br/">
+    <meta property="og:title" content="Maria Rosa Moda Feminina - Elegância e Estilo">
+    <meta property="og:description" content="Moda feminina e acessórios em Goiânia. Confira nossa história e políticas.">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Maria Rosa Moda Feminina">
+    <meta property="twitter:description" content="Moda feminina e acessórios em Goiânia.">
 
+    <title>Maria Rosa Moda Feminina | Moda e Acessórios em Goiânia</title>
+
+    <!-- Font Awesome para ícones (CDN Segura) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Reset e Variáveis */
+        :root {
+            --primary-color: #d14d72;
+            --secondary-color: #2c2c2c;
+            --light-bg: #fdf2f5;
+            --white: #ffffff;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --border-color: #e0e0e0;
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Lato', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo h1 {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 0;
+        }
+
+        .logo span {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            display: block;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--secondary-color);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .btn-whatsapp-header {
+            background-color: #25D366;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+        }
+
+        .btn-whatsapp-header:hover {
+            background-color: #128C7E;
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 20px;
+        }
+
+        .hero-content h2 {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--white);
+        }
+
+        /* Sections General */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        .section-title .divider {
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: 0 auto;
+        }
+
+        /* Quem Somos */
+        .sobre-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .sobre-texto p {
+            margin-bottom: 15px;
+            color: var(--text-light);
+        }
+
+        .sobre-texto strong {
+            color: var(--text-dark);
+        }
+
+        .sobre-imagem img {
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* Localização e Contato */
+        .contato-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .info-contato {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .info-item {
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .info-item i {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-top: 5px;
+        }
+
+        .info-item h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: var(--secondary-color);
+        }
+
+        .info-item p, .info-item a {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .info-item a:hover {
+            color: var(--primary-color);
+        }
+
+        .mapa iframe {
+            width: 100%;
+            height: 300px;
+            border-radius: 10px;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Dados Empresa */
+        .dados-empresa {
+            background-color: var(--light-bg);
+        }
+
+        .dados-box {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .dados-box ul {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .dados-box li {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .dados-box li strong {
+            color: var(--secondary-color);
+            display: block;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Políticas e Termos */
+        .politicas {
+            background-color: var(--white);
+        }
+
+        .politicas-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .politicas-content h3 {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            margin: 30px 0 15px;
+            color: var(--secondary-color);
+        }
+
+        .politicas-content h4 {
+            font-size: 1.2rem;
+            margin: 20px 0 10px;
+            color: var(--secondary-color);
+        }
+
+        .politicas-content p, .politicas-content li {
+            color: var(--text-light);
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+
+        .politicas-content ul {
+            list-style: disc;
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .aviso-legal {
+            background-color: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 0.9rem;
+            color: #856404;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: #b0b0b0;
+            padding: 50px 0 20px;
+            font-size: 0.9rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-col p, .footer-col a {
+            color: #b0b0b0;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .footer-col a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            font-size: 0.8rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 992px) {
+            .sobre-content, .contato-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-content h2 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .dados-box ul {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .hero-content h2 {
+                font-size: 2rem;
+            }
+            .hero {
+                height: 60vh;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <h1>Maria Rosa</h1>
+                <span>Moda Feminina</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#quem-somos">Quem Somos</a></li>
+                    <li><a href="#localizacao">Localização</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#politicas">Políticas</a></li>
+                </ul>
+            </nav>
+            <a href="https://wa.me/5562998682392" target="_blank" class="btn-whatsapp-header">
+                <i class="fab fa-whatsapp"></i> (62) 99868-2392
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Elegância e Estilo para Você</h2>
+            <p>Descubra a moda feminina que valoriza sua beleza e personalidade. Qualidade e tendência em Goiânia.</p>
+            <a href="#contato" class="btn-primary">Fale Conosco</a>
+        </div>
+    </section>
+
+    <!-- Quem Somos -->
+    <section id="quem-somos" class="sobre">
+        <div class="container">
+            <div class="section-title">
+                <h2>Quem Somos</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="sobre-content">
+                <div class="sobre-texto">
+                    <p>A <strong>Maria Rosa Moda Feminina LTDA</strong>, fundada em <strong>05/04/2017</strong>, nasceu com o propósito de trazer elegância, conforto e estilo para o guarda-roupa da mulher moderna.</p>
+                    <p>Localizada em <strong>Goiânia - Goiás</strong>, atuamos no comércio varejista e atacadista de artigos do vestuário e acessórios, além de confecção de peças exclusivas. Nosso compromisso é oferecer produtos de alta qualidade que atendam às expectativas de nossas clientes.</p>
+                    <p>Com uma trajetória construída sob os valores da ética, transparência e satisfação do cliente, a Maria Rosa Moda Feminina se consolidou como uma referência no segmento de moda em nossa região.</p>
+                    
+                    <div class="aviso-legal">
+                        <i class="fas fa-info-circle"></i> <strong>Nota de Transparência:</strong> Conforme dados públicos da Receita Federal, a empresa encontra-se com situação cadastral <strong>"Baixada"</strong> desde 22/10/2025 (Extinção por Encerramento Liquidação Voluntária). Este site permanece como registro histórico e informativo de suas atividades.
+                    </div>
+                </div>
+                <div class="sobre-imagem">
+                    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Loja de Moda Feminina">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Localização e Contato -->
+    <section id="localizacao" class="contato" style="background-color: var(--light-bg);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Localização e Contato</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="contato-grid">
+                <div class="info-contato">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Endereço</h4>
+                            <p>Goiânia - Goiás<br>CEP: Consulte via e-mail</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>Telefone / WhatsApp</h4>
+                            <p><a href="https://wa.me/5562998682392" target="_blank">(62) 99868-2392</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>E-mail</h4>
+                            <p><a href="mailto:mariarosamodafemininaoficial@gmail.com">mariarosamodafemininaoficial@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Horário de Atendimento</h4>
+                            <p>Segunda a Sexta: 09h às 18h<br>Sábado: 09h às 13h</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mapa">
+                    <!-- Mapa incorporado de Goiânia -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d122282.32285577477!2d-49.34517785!3d-16.6868912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ef11f5b1271b7%3A0x9d5b5b5b5b5b5b5b!2sGoi%C3%A2nia%20-%20GO!5e0!3m2!1spt-BR!2sbr!4v1600000000000!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dados da Empresa -->
+    <section class="dados-empresa">
+        <div class="container">
+            <div class="section-title">
+                <h2>Dados Cadastrais</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="dados-box">
+                <ul>
+                    <li><strong>CNPJ</strong> 27.474.715/0001-32</li>
+                    <li><strong>Razão Social</strong> Maria Rosa Moda Feminina LTDA</li>
+                    <li><strong>Nome Fantasia</strong> Maria Rosa Moda Feminina</li>
+                    <li><strong>Data de Abertura</strong> 05/04/2017</li>
+                    <li><strong>Porte</strong> Micro Empresa</li>
+                    <li><strong>Natureza Jurídica</strong> Sociedade Empresária Limitada</li>
+                    <li><strong>Capital Social</strong> R$ 50.000,00</li>
+                    <li><strong>Situação Cadastral</strong> Baixada (22/10/2025)</li>
+                    <li><strong>Atividade Principal</strong> 47.81-4-00 - Comércio varejista de artigos do vestuário e acessórios</li>
+                    <li><strong>Sócio-Administrador</strong> Sergio Dias Borges</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Políticas e Termos -->
+    <section id="politicas" class="politicas">
+        <div class="container">
+            <div class="section-title">
+                <h2>Políticas e Termos</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="politicas-content">
+                
+                <h3>Política de Privacidade</h3>
+                <p>A <strong>Maria Rosa Moda Feminina LTDA</strong>, inscrita no CNPJ 27.474.715/0001-32, valoriza a privacidade e a segurança dos dados de seus clientes e visitantes. Esta Política de Privacidade descreve como coletamos, usamos e protegemos suas informações.</p>
+                
+                <h4>1. Coleta de Informações</h4>
+                <p>Coletamos informações pessoais apenas quando você nos fornece voluntariamente, como ao entrar em contato via e-mail, WhatsApp ou formulários. Os dados coletados podem incluir: nome, e-mail, telefone e endereço.</p>
+
+                <h4>2. Uso das Informações</h4>
+                <p>As informações coletadas são utilizadas exclusivamente para:</p>
+                <ul>
+                    <li>Responder a solicitações e dúvidas;</li>
+                    <li>Enviar comunicações sobre produtos e serviços (com seu consentimento);</li>
+                    <li>Melhorar nosso atendimento e experiência do usuário.</li>
+                </ul>
+
+                <h4>3. Compartilhamento de Dados</h4>
+                <p>Não vendemos, alugamos ou compartilhamos suas informações pessoais com terceiros, exceto quando exigido por lei ou para cumprir obrigações legais.</p>
+
+                <h4>4. Segurança</h4>
+                <p>Adotamos medidas técnicas e administrativas para proteger seus dados contra acessos não autorizados, perda ou alteração.</p>
+
+                <h4>5. Seus Direitos (LGPD)</h4>
+                <p>Em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018), você tem o direito de solicitar acesso, correção ou exclusão de seus dados pessoais. Para exercer esses direitos, entre em contato pelo e-mail: <a href="mailto:mariarosamodafemininaoficial@gmail.com">mariarosamodafemininaoficial@gmail.com</a>.</p>
+
+                <h3>Termos de Uso</h3>
+                <p>Ao acessar este site, você concorda com os termos e condições abaixo:</p>
+                <ul>
+                    <li>O conteúdo deste site é informativo e de propriedade da Maria Rosa Moda Feminina LTDA.</li>
+                    <li>É proibida a reprodução total ou parcial sem autorização prévia.</li>
+                    <li>As informações sobre produtos e serviços podem ser alteradas sem aviso prévio.</li>
+                    <li>Não nos responsabilizamos por links externos contidos neste site.</li>
+                </ul>
+
+                <h3>Política de Cookies</h3>
+                <p>Utilizamos cookies para melhorar sua experiência de navegação. Cookies são pequenos arquivos de texto armazenados no seu dispositivo. Você pode configurar seu navegador para recusar cookies, mas isso pode afetar funcionalidades do site.</p>
+
+                <h3>Política de Trocas e Devoluções</h3>
+                <p>Em conformidade com o Código de Defesa do Consumidor (Lei nº 8.078/1990), nossa política de trocas e devoluções segue as seguintes diretrizes:</p>
+                <ul>
+                    <li><strong>Arrependimento:</strong> O cliente tem até 7 dias corridos após o recebimento para desistir da compra, desde que o produto esteja em perfeito estado.</li>
+                    <li><strong>Defeitos:</strong> Produtos com defeito podem ser trocados em até 30 dias para itens não duráveis e 90 dias para duráveis.</li>
+                    <li>Para iniciar uma troca ou devolução, entre em contato pelo WhatsApp (62) 99868-2392 ou e-mail.</li>
+                </ul>
+
+                <div class="aviso-legal">
+                    <strong>Atenção:</strong> Como a empresa encontra-se com situação cadastral "Baixada", as políticas acima permanecem válidas para fins de registro histórico e cumprimento de obrigações legais remanescentes.
+                </div>
+
+                <h3>Legislação Aplicável</h3>
+                <p>Esta política é regida pelas leis brasileiras, incluindo a LGPD, o Marco Civil da Internet e o Código de Defesa do Consumidor. Quaisquer disputas serão resolvidas no foro da Comarca de Goiânia - GO.</p>
+
+                <p><em>Última atualização: Setembro de 2026.</em></p>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Maria Rosa Moda Feminina</h4>
+                    <p>Elegância e estilo para a mulher moderna. Qualidade e tendência em Goiânia e região.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Links Rápidos</h4>
+                    <a href="#home">Home</a>
+                    <a href="#quem-somos">Quem Somos</a>
+                    <a href="#localizacao">Localização</a>
+                    <a href="#politicas">Políticas e Termos</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Goiânia - GO</p>
+                    <p><i class="fas fa-phone"></i> (62) 99868-2392</p>
+                    <p><i class="fas fa-envelope"></i> mariarosamodafemininaoficial@gmail.com</p>
+                    <p><i class="fas fa-id-card"></i> CNPJ: 27.474.715/0001-32</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Maria Rosa Moda Feminina LTDA. Todos os direitos reservados.</p>
+                <p>Empresa com situação cadastral Baixada em 22/10/2025. Site informativo.</p>
+                <p>Este site não coleta dados automaticamente sem consentimento. Política de Privacidade disponível acima.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
